@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+
+  <view style='padding:20rpx;'>
+    <view class="weui-cells weui-cells_after-title">
+
+      <!-- 会费额度 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">会费金额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="50元起" bind:change="editInput" />
+        </view>
+      </view>
+
+      <!--手机号  -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="输入您的手机号" bind:change="editInput" />
+        </view>
+      </view>
+    </view>
+
+    <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='getSeat'>
+      <text style='color: #fff'>确定缴费</text>
+    </view>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto">浙江大学无锡校友会</text>
+  </view>
+</view>
