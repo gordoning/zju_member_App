@@ -32,7 +32,7 @@
       </view>
     </view>
 
-    <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='getSeat'>
+    <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='donate'>
       <text style='color: #fff'>确定缴费</text>
     </view>
   </view>
