@@ -1,15 +1,31 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view> -->
 
+  <view style='width: 220rpx; display:flex; justify-content: center; align-items:center; '>
+      <image mode='widthFix' src='../../images/浙大校友会图标.jpg'></image>
+  </view>
+
+  <view style='display:flex; justify-content: center; align-items:center; '>
+    <text>浙江大学无锡校友会-会员缴费</text>
+
+  </view>
+
+  <!-- 缴纳会费的表单 -->
   <view style="margin-top: 10px">
     <view class="weui-cells weui-cells_after-title">
+
+      <!-- // 缴费年限 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">类别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindMemberYearChange" value="{{memberIndex}}" range="{{all_member_year}}">
+            <view class="weui-select weui-select_in-select-after">{{all_member_year[memberIndex]}}年会费</view>
+          </picker>
+        </view>
+      </view>
+
 
       <!--姓名  -->
       <view class="weui-cell weui-cell_input">
@@ -41,26 +57,13 @@
           <input class="weui-input" type="digit" placeholder="50元起" bindinput="editAmount" />
         </view>
       </view>
-
-      <!-- // 缴费年限 -->
-      <view class="weui-cell weui-cell_select">
-                <view class="weui-cell__hd weui-cell__hd_in-select-after">
-                    <view class="weui-label">哪一年会费</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <picker bindchange="bindMemberYearChange" value="{{memberIndex}}" range="{{all_member_year}}">
-                        <view class="weui-select weui-select_in-select-after">{{all_member_year[memberIndex]}}</view>
-                    </picker>
-                </view>
-            </view>
     </view>
+
+    <view class="weui-cells__tips">您支付的会费，将直接入账‘浙江大学无锡校友会’的资金账户</view>
 
     <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='donate'>
-      <text style='color: #fff'>确定缴费</text>
+      <text style='color: #fff'>确定支付</text>
     </view>
   </view>
 
-  <view class="usermotto">
-    <text class="user-motto">浙江大学无锡校友会</text>
-  </view>
 </view>
