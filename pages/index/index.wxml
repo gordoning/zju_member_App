@@ -8,18 +8,19 @@
     </block>
   </view> -->
 
-  <view style='padding:20rpx;'>
+  <view style="margin-top: 10px">
     <view class="weui-cells weui-cells_after-title">
 
-      <!-- 会费额度 -->
+      <!--姓名  -->
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
-          <view class="weui-label">会费金额</view>
+          <view class="weui-label">姓名</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="50元起" bind:change="editInput" />
+          <input class="weui-input" placeholder="输入您的全名" bindinput="editName" />
         </view>
       </view>
+
 
       <!--手机号  -->
       <view class="weui-cell weui-cell_input">
@@ -27,9 +28,31 @@
           <view class="weui-label">手机号</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="输入您的手机号" bind:change="editInput" />
+          <input class="weui-input" placeholder="输入您的手机号" bindinput="editPhone" />
         </view>
       </view>
+
+      <!-- 会费额度 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">金额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="digit" placeholder="50元起" bindinput="editAmount" />
+        </view>
+      </view>
+
+      <!-- // 缴费年限 -->
+      <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">哪一年会费</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindMemberYearChange" value="{{memberIndex}}" range="{{all_member_year}}">
+                        <view class="weui-select weui-select_in-select-after">{{all_member_year[memberIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
     </view>
 
     <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='donate'>
