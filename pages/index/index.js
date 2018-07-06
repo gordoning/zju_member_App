@@ -68,6 +68,13 @@ Page({
     console.log(AV.User.current())
   },
 
+  test:function(){
+    console.log('fdd');
+    wx.switchTab({
+      url: '../logs/logs'
+    })
+  },
+
   //缴纳会费
   donate() {
     const params = {
@@ -93,7 +100,9 @@ Page({
           icon: 'success',
           duration: 1500,
         });
-        // setTimeout(this.refreshOrders.bind(this), 1500);
+        setTimeout(wx.switchTab({
+          url: '../logs/logs'
+        }), 1500);
       }
       data.fail = ({
         errMsg

@@ -2,7 +2,7 @@
 <view class="container">
 
   <view style='width: 220rpx; display:flex; justify-content: center; align-items:center; '>
-      <image mode='widthFix' src='../../images/浙大校友会图标.jpg'></image>
+    <image mode='widthFix' src='../../images/浙大校友会图标.jpg'></image>
   </view>
 
   <view style='display:flex; justify-content: center; align-items:center; '>
@@ -64,6 +64,10 @@
     <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='donate'>
       <text style='color: #fff'>确定支付</text>
     </view>
+
+    <!-- <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='test'>
+      <text style='color: #fff'>跳转</text>
+    </view> -->
   </view>
 
 </view>

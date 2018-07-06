@@ -6,3 +6,10 @@
 .log-item {
   margin: 10rpx;
 }
+
+.order {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  margin: 0 -12px;
+  padding: 4px 12px;
+}
