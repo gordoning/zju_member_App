@@ -1,12 +1,19 @@
 <!--index.wxml-->
 <view class="container">
 
-  <view style='width: 220rpx; display:flex; justify-content: center; align-items:center; '>
-    <image mode='widthFix' src='../../images/浙大校友会图标.jpg'></image>
+  <view style='height: 180rpx; display:flex; justify-content: center; align-items:center; '>
+    <view style='width:180rpx;display:flex; justify-content: center;'>
+      <image mode='widthFix' src='http://lc-i2qdmx96.cn-n1.lcfile.com/6520c3de4a2305fc98cc.jpg'></image>
+    </view>
+
   </view>
 
   <view style='display:flex; justify-content: center; align-items:center; '>
-    <text>浙江大学无锡校友会-会员缴费</text>
+    <view style='font-size:14px'>
+      <text>浙大无锡校友会需要您的大力支持</text>
+    </view>
+
+
 
   </view>
 
@@ -27,13 +34,28 @@
       </view>
 
 
+
+
+      <!-- 会费额度 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">金额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="digit" confirm-type='done' placeholder="100元起" bindblur="editAmount" />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">请填写您的基本信息</view>
+    <view class="weui-cells weui-cells_after-title">
       <!--姓名  -->
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
           <view class="weui-label">姓名</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="输入您的全名" bindinput="editName" />
+          <input class="weui-input" placeholder="请输入" confirm-type='next' bindblur="editName" />
         </view>
       </view>
 
@@ -44,27 +66,63 @@
           <view class="weui-label">手机号</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="输入您的手机号" bindinput="editPhone" />
+          <input class="weui-input" type="number" confirm-type='next' placeholder="请输入" bindblur="editPhone" />
         </view>
       </view>
 
-      <!-- 会费额度 -->
+      <!--专业  -->
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
-          <view class="weui-label">金额</view>
+          <view class="weui-label">专业</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" type="digit" placeholder="50元起" bindinput="editAmount" />
+          <input class="weui-input" confirm-type='next' placeholder="请输入" bindblur="editMajor" />
         </view>
       </view>
+
+      <!--毕业年份  -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">毕业年份</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" confirm-type='next' placeholder="请输入" bindblur="editGraduateYear" />
+        </view>
+      </view>
+
+      <!--工作单位  -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">工作单位</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" confirm-type='next' placeholder="选填" bindblur="editCompany" />
+        </view>
+      </view>
+
+      <!--住址  -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">住址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" confirm-type='next' placeholder="选填" bindblur="editHomeAddress" />
+        </view>
+      </view>
+
+
+
     </view>
 
-    <view class="weui-cells__tips">您支付的会费，将直接入账‘浙江大学无锡校友会’的资金账户</view>
+
+
 
     <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='donate'>
       <text style='color: #fff'>确定支付</text>
     </view>
 
+
+    <view class="weui-cells__tips">友情提示：您支付的会费，将直接入账‘浙江大学无锡校友会’的官方账户</view>
     <!-- <view style="background-color: #FF534D; height: 80rpx;display:flex; justify-content: center; align-items:center; border-radius:10rpx;margin-top:10rpx; " bindtap='test'>
       <text style='color: #fff'>跳转</text>
     </view> -->

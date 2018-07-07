@@ -11,7 +11,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "images/homeIcon.png",
         "selectedIconPath": "images/homeSelectedIcon.png",
-        "text": "首页"
+        "text": "会员"
       },
       {
         "pagePath": "pages/logs/logs",
@@ -21,7 +21,7 @@
       }
     ],
     "selectedColor":"#FF534D",
-    "borderStyle":"white"
+    "borderStyle":"black"
   },
   "networkTimeout": {
     "request": 10000,

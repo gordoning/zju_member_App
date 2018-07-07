@@ -36,8 +36,18 @@ Page({
       that.setData({orders}) ;
       // console.log(orders[0].paidAt.replace('T',' ').replace('.000Z',''));
       // console.log(orders[0].paidAt.formatTime(sjc, 'Y/M/D h:m:s'));
+      if(that.data.orders.length === 0){
+        wx.showModal({
+          title: '未找到您的缴费记录',
+          content: '请确认',
+        })
+      }
 
     }, function (error) {
+      wx.showModal({
+        title: '暂时无法获取',
+        content: '请稍后再试',
+      })
     });
   //   return new Query(Order)
   //     .equalTo('user', User.current())
