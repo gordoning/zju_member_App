@@ -21,7 +21,10 @@ Page({
 
   onShow: function(){
     console.log("开始显示");
-    return this.refreshOrders();
+    wx.showLoading({
+      title: '正在查询中',
+    })
+    this.refreshOrders();
   },
   
   //拉取用户的订单
@@ -34,6 +37,7 @@ Page({
     query.descending('createdAt').find().then(function (results) {
       const orders = results.map(function (order) { return order.toJSON() });
       that.setData({orders}) ;
+      wx.hideLoading();
       // console.log(orders[0].paidAt.replace('T',' ').replace('.000Z',''));
       // console.log(orders[0].paidAt.formatTime(sjc, 'Y/M/D h:m:s'));
       if(that.data.orders.length === 0){
